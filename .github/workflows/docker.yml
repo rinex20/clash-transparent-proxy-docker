@@ -29,8 +29,8 @@ jobs:
         id: docker_image_tag
         with:
           cond: ${{ steps.vars.outputs.branch == 'master' }}
-          if_true: "clarkecheng/clash-transparent-proxy-docker:latest"
-          if_false: "clarkecheng/clash-transparent-proxy-docker:${{ steps.vars.outputs.tag }}"
+          if_true: "rinex20/clash-transparent-proxy-docker:latest"
+          if_false: "rinex20/clash-transparent-proxy-docker:${{ steps.vars.outputs.tag }}"
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
         with:
