@@ -42,7 +42,7 @@
 2. 下载 docker-compose.yml
 
     ```bash
-    wget https://raw.githubusercontent.com/ClarkeCheng/clash-transparent-proxy-docker/master/docker-compose.yml
+    wget https://raw.githubusercontent.com/rinex20/clash-transparent-proxy-docker/master/docker-compose.yml
     ```
 
 3. 修改参数
