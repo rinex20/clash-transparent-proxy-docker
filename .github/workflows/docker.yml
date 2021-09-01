@@ -24,7 +24,7 @@ jobs:
         run: |
           echo ::set-output name=branch::${GITHUB_REF##*/}
           echo ::set-output name=tag::${GITHUB_REF##*/}
-      - name: Generate Docker image tag
+      - name: Generate Docker image tag/0
         uses: haya14busa/action-cond@v1
         id: docker_image_tag
         with:
