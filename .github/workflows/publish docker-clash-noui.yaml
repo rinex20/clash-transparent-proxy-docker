@@ -1,4 +1,4 @@
-name: Publish Docker Image
+name: Publish Docker Image(clash-noui)
 on:
   push:
     branches:
