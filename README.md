@@ -37,6 +37,6 @@
 
 ### ROS配置
 
-1. 在IP/Firewall下，找到Adresses list，然后创建需要进行无缝翻墙的设备的IP List
+1. 在IP/Firewall下，找到Address lists，然后创建需要进行无缝翻墙的设备的IP List
 
 to be continued...
