@@ -1,4 +1,4 @@
-name: Publish image to docker hub
+name: Publish image to docker hub(clash with ui)
 
 on:
   push:
