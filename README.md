@@ -33,22 +33,10 @@
     docker run --name clash -d -v /your/path/config.yaml:/root/.config/clash/config.yaml  --network <macvlan网络名> --ip <容器IP地址> --cap-add=NET_ADMIN clarkecheng/clash-transparent-proxy-docker
     ```
 
-5. 将手机/电脑等客户端，网关和DNS设置为容器 IP
+5. 搭配ROS主路由器，进行路由分流，其中国外被墙流量route到clash网关，其他正常在ROS内部进行访问。
 
-### Docker Compose
+### ROS配置
 
-1. 确保你的 docker-compose 版本是 1.27 以上
+1. 在IP/Firewall下，找到Adresses list，然后创建需要进行无缝翻墙的设备的IP List
 
-2. 下载 docker-compose.yml
-
-    ```bash
-    wget https://raw.githubusercontent.com/rinex20/clash-transparent-proxy-docker/master/docker-compose.yml
-    ```
-
-3. 修改参数
-
-4. 执行命令以启动容器
-
-    ```bash
-    docker-compose up -d
-    ```
+to be continued...
