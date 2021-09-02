@@ -2,9 +2,15 @@ name: Publish image to docker hub
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - master
+    tags:
+      - '*'
+    paths-ignore:
+      - config.yaml
+      - docker-compose.yml
+      - README.md
+      - LICENSE
 
 jobs:
 
