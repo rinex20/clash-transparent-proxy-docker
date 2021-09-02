@@ -1,5 +1,5 @@
 # build clash dashboard
-FROM node as node_builder
+FROM ubuntu:latest as node_builder
 # fix https://github.com/conda-forge/pygridgen-feedstock/issues/10#issuecomment-365914605
 RUN apt-get update && apt-get install -y libgl1-mesa-glx
 WORKDIR /clash-dashboard-src
