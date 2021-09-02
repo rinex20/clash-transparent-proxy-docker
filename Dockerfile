@@ -1,16 +1,6 @@
-# build clash dashboard
-FROM ubuntu:latest as node_builder
-# fix https://github.com/conda-forge/pygridgen-feedstock/issues/10#issuecomment-365914605
-RUN apt-get update && apt-get install -y libgl1-mesa-glx
-WORKDIR /clash-dashboard-src
-RUN git clone https://github.com/Dreamacro/clash-dashboard.git --depth=1 /clash-dashboard-src
-RUN npm install
-RUN npm run build
-RUN mv ./dist /clash_ui
-
-# build clash
 FROM golang:alpine as builder
 
+# build clash
 RUN apk add --no-cache make git && \
     wget -O /Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb && \
     git clone https://github.com/Dreamacro/clash.git /clash-src
