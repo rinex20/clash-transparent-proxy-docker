@@ -4,7 +4,7 @@ services:
     cap_add:
       - NET_ADMIN
     container_name: clash
-    image: clarkecheng/clash-transparent-proxy-docker
+    image: rinex20/clash-transparent-proxy-docker
     networks: 
       clash_macvlan:
         ipv4_address: 192.168.0.2 # 改成你想要的 IP 地址
@@ -15,7 +15,7 @@ networks:
   clash_macvlan:
     driver: macvlan
     driver_opts:
-      parent: br-lan # 要桥接的网卡
+      parent: eth0 # 要桥接的网卡
     ipam:
       driver: default
       config:
