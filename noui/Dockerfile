@@ -18,7 +18,6 @@ COPY --from=builder /clash-src/bin/clash /usr/local/bin/
 COPY --from=builder /Country.mmdb /root/.config/clash/
 
 COPY entrypoint.sh /usr/local/bin/
-COPY config.yaml /root/.config/clash/
 
 RUN apk add --no-cache \
     ca-certificates  \
